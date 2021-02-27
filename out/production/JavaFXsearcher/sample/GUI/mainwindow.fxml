@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1100" prefWidth="1500" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.MainController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="14.0" layoutY="14.0" prefHeight="786.0" prefWidth="244.0">
+               <children>
+                  <AnchorPane prefHeight="47.0" prefWidth="244.0">
+                     <children>
+                        <Label layoutX="97.0" layoutY="15.0" prefHeight="17.0" prefWidth="53.0" text="Kategorie" />
+                     </children>
+                  </AnchorPane>
+                  <ListView fx:id="categoryList" prefHeight="200.0" prefWidth="246.0" />
+                  <AnchorPane prefHeight="69.0" prefWidth="244.0">
+                     <children>
+                        <ChoiceBox fx:id="choiceBox" layoutX="47.0" layoutY="22.0" prefWidth="150.0" />
+                     </children></AnchorPane>
+                  <Separator prefWidth="200.0" />
+                  <AnchorPane prefHeight="47.0" prefWidth="244.0">
+                     <children>
+                        <Label layoutX="78.0" layoutY="15.0" prefHeight="17.0" prefWidth="90.0" text="Zakres Punktacji" />
+                     </children>
+                  </AnchorPane>
+                  <HBox prefHeight="160.0" prefWidth="246.0">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Slider fx:id="min" orientation="VERTICAL">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Slider>
+                              <Label layoutX="70.0" layoutY="33.0" prefHeight="17.0" prefWidth="53.0" text="Min" />
+                              <Label fx:id="minLabel" layoutX="70.0" layoutY="89.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="191.0" prefWidth="122.0">
+                           <children>
+                              <Slider fx:id="max" orientation="VERTICAL">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Slider>
+                              <Label layoutX="70.0" layoutY="33.0" prefHeight="17.0" prefWidth="53.0" text="Max" />
+                              <Label fx:id="maxLabel" layoutX="70.0" layoutY="89.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <AnchorPane prefHeight="47.0" prefWidth="244.0">
+                     <children>
+                        <Label fx:id="error" layoutX="31.0" layoutY="15.0" prefHeight="17.0" prefWidth="183.0" />
+                     </children>
+                  </AnchorPane>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="searchButton" layoutX="65.0" layoutY="67.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="116.0" text="Filtruj" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <Pane prefHeight="800.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="700.0" prefWidth="1000.0" >
+               <fx:include fx:id="pagination" source="pagination.fxml"></fx:include>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

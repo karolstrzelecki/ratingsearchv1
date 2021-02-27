@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<fx:root type="javafx.scene.layout.VBox" xmlns:fx="http://javafx.com/fxml">
+
+    <TableView fx:id="tableView" prefHeight="650.0" prefWidth="1000.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx"
+               xmlns:fx="http://javafx.com/fxml">
+        <columns>
+            <TableColumn fx:id="title" prefWidth="350" text="Title" />
+            <TableColumn fx:id="issn" prefWidth="100" text="ISSN" />
+            <TableColumn fx:id="hindexsci" prefWidth="100.0" text="H Index" />
+            <TableColumn fx:id="citations" prefWidth="100.0" text="cytowania" />
+            <TableColumn fx:id="impactFactor" prefWidth="100.0" text="impact Factor" />
+            <TableColumn fx:id="buttonDialog" prefWidth="100.0" text="historia" />
+        </columns>
+    </TableView>
+</fx:root>
+
+
